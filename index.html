@@ -3,85 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PT Awan Komputindo Sentosa - Coming Soon</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-            padding: 20px;
-        }
-        .container {
-            max-width: 600px;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px rectangle rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-        }
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
-            background: linear-gradient(to right, #38bdf8, #0284c7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        h2 {
-            font-size: 1.2rem;
-            font-weight: 400;
-            color: #94a3b8;
-            margin-bottom: 30px;
-        }
-        .badge {
-            display: inline-block;
-            padding: 8px 16px;
-            background-color: #0369a1;
-            color: #e0f2fe;
-            font-size: 0.9rem;
-            font-weight: 600;
-            border-radius: 50px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        p {
-            font-size: 1.1rem;
-            color: #cbd5e1;
-            line-height: 1.6;
-        }
-        .footer {
-            margin-top: 40px;
-            font-size: 0.85rem;
-            color: #64748b;
-        }
-    </style>
+    <title>PT Awan Komputindo Sentosa</title>
+    <script type="text/javascript">
+        // 1. Blokir Klik Kanan langsung di halaman utama
+        document.addEventListener('contextmenu', e => e.preventDefault());
+
+        // 2. Blokir Tombol F12, Ctrl+U, Ctrl+Shift+I, dan Ctrl+Shift+J
+        document.onkeydown = function (e) {
+            if (e.keyCode == 123 || 
+                (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74)) || 
+                (e.ctrlKey && e.keyCode == 85)) {
+                return false;
+            }
+        };
+
+        // 3. Eksekusi muat kode tampilan yang terenkripsi
+        const _0xaks = "PCFST0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImlkIj4KPGhlYWQ+CiAgICA8bWV0YSBjaGFyc2V0PSJVVEYtOCI+CiAgICA8c3R5bGU+CiAgICAgICAgKiB7IG1hcmdpbjogMDsgcGFkZGluZzogMDsgYm94LXNpemluZzogYm9yZGVyLWJveDsgfQogICAgICAgIGJvZHkgeyBmb250LWZhbWlseTogJ1NlZ29lIFVJJywgVGFob21hLCBHZW5ldmEsIFZlcmRhbmEsIHNhbnMtc2VyaWY7IGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgxMzVkZWcsICMwZjE3MmEgMCUsICMxZTI5M2IgMTAwJSk7IGNvbG9yOiAjZmZmZmZmOyBkaXNwbGF5OiBmbGV4OyBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsgYWxpZ24taXRlbXM6IGNlbnRlcjsgaGVpZ2h0OiAxMDB2aDsgdGV4dC1hbG9nbjogY2VudGVyOyBwYWRkaW5nOiAyMHB4OyAtd2Via2l0LXVzZXItc2VsZWN0OiBub25lOyAtbW96LXVzZXItc2VsZWN0OiBub25lOyAtbXMtdXNlci1zZWxlY3Q6IG5vbmU7IHVzZXItc2VsZWN0OiBub25lOyB9CiAgICAgICAgLmNvbnRhaW5lciB7IG1heC13aWR0aDogNjAwcHg7IHBhZGRpbmc6IDQwcHg7IGJhY2tncm91bmQ6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wMyk7IGJvcmRlci1yYWRpdXM6IDE2cHg7IGJhY2tkcm9wLWZpbHRlcjogYmx1cigxMHB4KTsgYm94LXNoYWRvdzogMCA0cHggMzBweCByZ2JhKDAsIDAsIDAsIDAuNSk7IH0KICAgICAgICBoMSB7IGZvbnQtc2l6ZTogMi41cmVtOyBmb250LXdlaWdodDogNzAwOyBtYXJnaW4tYm90dG9tOiAxMHB4OyBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQsICMzOGJkZjgsICMwMjg0YzcpOyAtd2Via2l0LWJhY2tncm91bmQtY2xpcDogdGV4dDsgLXdlYmtpdC10ZXh0LWZpbGwtY29sb3I6IHRyYW5zcGFyZW50OyB9CiAgICAgICAgaDIgeyBmb250LXNpemU6IDEuMnJlbTsgZm9udC13ZWlnaHQ6IDQwMDsgY29sb3I6ICM5NGEzYjg7IG1hcmdpbi1ib3R0b206IDMwcHg7IH0KICAgICAgICAuYmFkZ2UgeyBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IHBhZGRpbmc6IDhweCAxNnB4OyBiYWNrZ3JvdW5kLWNvbG9yOiAjMDM2OWExOyBjb2xvcjogI2UwZjJmZTsgZm9udC1zaXplOiAwLjlyZW07IGZvbnQtd2VpZ2h0OiA2MDA7IGJvcmRlci1yYWRpdXM6IDUwcHg7IG1hcmdpbi1ib3R0b206IDIwcHg7IHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7IH0KICAgICAgICBwIHsgZm9udC1zaXplOiAxLjFyZW07IGNvbG9yOiAjY2JkNWUxOyBsaW5lLWhlaWdodDogMS42OyB9CiAgICAgICAgLmZvb3RlciB7IG1hcmdpbi10b3A6IDQwcHg7IGZvbnQtc2l6ZTogMC44NXJlbTsgY29sb3I6ICM2NDc0OGI7IH0KICAgIDwvc3R5bGU+CjwvaGVhZD4KPGJvZHk+CiAgICA8ZGl2IGNsYXNzPSJjb250YWluZXIiPgogICAgICAgIDxkaXYgY2xhc3M9ImJhZGdlIj5XZWJzaXRlIFVuZGVyIENvbnN0cnVjdGlvbjwvZGl2PgogICAgICAgIDxoMT5QVCBBd2FuIEtvbXB1dGluZG8gU2VudG9zYTwvaDE+CiAgICAgICAgPGgyPklUIFNvbHV0aW9uICYgU2VjdXJpdHkgU3lzdGVtPC9oMj4KICAgICAgICA8cD5LYW1pIHNlZGFuZyBtZW55aWFwa2thbiBzZXN1YXR1IHlhbmcgbHVhciBiYXNhIHVudHVrIG1lbmdvcHRpbWFsa2FuIGluZnJhc3RydWtodXIgZGlnaXRhbCBBbmRhLiBXZWJzaXRlIHJlc21pIGNhbWkgYWthbiBzZWdlcmEgaGFkaXIuPC9wPgogICAgICAgIDxkaXYgY2xhc3M9ImZvb2RlciI+JmNvcHk7IDIwMjYgUFQgQXdhbiBLb21wdXRpbmRvIFNlbnRvc2EuIEFsbCByaWdodHMgcmVzZXJ2ZWQuPC9kaXY+CiAgICA8L2Rpdj4KPC9ib2R5Pgo8L2h0bWw+";
+        
+        document.open();
+        document.write(atob(_0xaks));
+        document.close();
+    </script>
 </head>
 <body>
-
-    <div class="container">
-        <div class="badge">Website Under Construction</div>
-        <h1>PT Awan Komputindo Sentosa</h1>
-        <h2>IT Solution & Security System</h2>
-        
-        <p>Kami sedang menyiapkan sesuatu yang luar biasa untuk mengoptimalkan infrastruktur digital Anda. Website resmi kami akan segera hadir.</p>
-        
-        <div class="footer">
-            &copy; 2026 PT Awan Komputindo Sentosa. All rights reserved.
-        </div>
-    </div>
-
+    <noscript>Harap aktifkan JavaScript untuk melihat halaman ini.</noscript>
 </body>
 </html>
